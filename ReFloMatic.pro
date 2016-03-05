@@ -1,4 +1,4 @@
-update=3/4/2016 1:22:13 PM
+update=3/5/2016 3:09:48 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -57,5 +57,6 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=stm32
+LibName31=TFT
 [general]
 version=1
