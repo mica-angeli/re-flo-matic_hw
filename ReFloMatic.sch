@@ -1241,4 +1241,6 @@ Text Notes 8150 7650 0    60   ~ 0
 3/5/2016
 Text Notes 10600 7650 0    60   ~ 0
 A
+Text Notes 2450 1400 0    60   ~ 0
+TODO\n--------------------------------\n+ Make sure TFT LED resistor values are correct.\n+ Add a transistor to turn TFT LEDs on and off.\n+ Add Micro SD connector to SPI bus.\n+ Make sure piezo resistor is the correct value.\n+ Reverse TFT connector pin order.
 $EndSCHEMATC
