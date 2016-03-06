@@ -1233,4 +1233,12 @@ F 3 "" H 6000 6300 50  0000 C CNN
 	1    6000 6300
 	1    0    0    -1  
 $EndComp
+Text Notes 7100 6950 0    60   ~ 0
+This is a PID controller for a reflow oven.  It features temperature sensing through a\nK-type thermocouple, dual element control, a touchscreen user interface, a servo\nautomatic door opener, and a buzzer to alert the user.
+Text Notes 7350 7500 0    60   ~ 0
+Re-Flo-Matic Schematic Drawing
+Text Notes 8150 7650 0    60   ~ 0
+3/5/2016
+Text Notes 10600 7650 0    60   ~ 0
+A
 $EndSCHEMATC
