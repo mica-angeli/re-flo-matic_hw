@@ -1,4 +1,4 @@
-update=3/6/2016 3:25:39 AM
+update=3/11/2016 8:28:09 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,5 +59,6 @@ LibName29=valves
 LibName30=stm32
 LibName31=TFT
 LibName32=regulators
+LibName33=sd_card
 [general]
 version=1

@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MicroSD_Card
+D Micro SD Card Reader
+K CONN SD
+F http://media.digikey.com/PDF/Data%20Sheets/Hirose%20PDFs/DM3D-SF.pdf
+$ENDCMP
+#
+$CMP SD_Card
+D SD Card Reader
+K CONN SD
+F http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf
+$ENDCMP
+#
+#End Doc Library
