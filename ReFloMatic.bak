@@ -1168,9 +1168,9 @@ Text Label 650  3350 0    60   ~ 0
 OVEN1
 Text Label 650  3050 0    60   ~ 0
 OVEN2
-Text Label 3000 2150 2    60   ~ 0
+Text Label 3050 2150 2    60   ~ 0
 ~TFT_RS
-Text Label 3000 2250 2    60   ~ 0
+Text Label 3050 2250 2    60   ~ 0
 TFT_WR
 Wire Wire Line
 	1250 2150 650  2150
@@ -1207,14 +1207,13 @@ Wire Wire Line
 Wire Wire Line
 	3050 3050 2450 3050
 Wire Wire Line
-	3000 2250 2450 2250
+	2450 2250 3050 2250
 Wire Wire Line
-	3000 2150 2450 2150
+	2450 2150 3050 2150
 NoConn ~ 2450 1850
 NoConn ~ 2450 1950
 NoConn ~ 2450 2350
 NoConn ~ 2450 2450
-NoConn ~ 2450 2550
 NoConn ~ 2450 2650
 NoConn ~ 2450 2750
 NoConn ~ 2450 2850
@@ -1237,11 +1236,11 @@ This is a PID controller for a reflow oven.  It features temperature sensing thr
 Text Notes 7350 7500 0    60   ~ 0
 Re-Flo-Matic Schematic Drawing
 Text Notes 8150 7650 0    60   ~ 0
-3/5/2016
+3/11/2016
 Text Notes 10600 7650 0    60   ~ 0
-A
+B
 Text Notes 2450 1400 0    60   ~ 0
-TODO\n--------------------------------\n+ Make sure TFT LED resistor values are correct.\n+ Add Micro SD connector to SPI bus.\n+ Make sure piezo resistor is the correct value.\n+ Reverse TFT connector pin order.
+TODO\n--------------------------------\n+ Make sure TFT LED resistor values are correct.\n+ Make sure piezo resistor is the correct value.\n+ Reverse TFT connector pin order.
 Text Label 3050 3750 2    60   ~ 0
 SD_MOSI
 Wire Wire Line
@@ -1253,12 +1252,155 @@ Wire Wire Line
 $Comp
 L MicroSD_Card CON?
 U 1 1 56E3F832
-P 4850 2850
-F 0 "CON?" H 4175 3500 50  0000 C CNN
-F 1 "MicroSD_Card" H 5400 2400 50  0000 C CNN
-F 2 "DM3D-SF" H 5000 3250 50  0000 C CNN
-F 3 "" H 4850 2850 50  0000 C CNN
-	1    4850 2850
+P 4750 2900
+F 0 "CON?" H 4075 3550 50  0000 C CNN
+F 1 "MicroSD_Card" H 5300 2450 50  0000 C CNN
+F 2 "DM3D-SF" H 4900 3300 50  0000 C CNN
+F 3 "" H 4750 2900 50  0000 C CNN
+	1    4750 2900
 	1    0    0    -1  
 $EndComp
+$Comp
+L DTC114E Q?
+U 1 1 56E48E99
+P 6500 3050
+F 0 "Q?" H 6700 3125 50  0000 L CNN
+F 1 "MMUN2211" H 6700 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 6500 3050 50  0001 L CNN
+F 3 "" H 6500 3050 50  0000 L CNN
+	1    6500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 56E48F45
+P 6600 3400
+F 0 "#PWR?" H 6600 3150 50  0001 C CNN
+F 1 "GND" H 6600 3250 50  0000 C CNN
+F 2 "" H 6600 3400 50  0000 C CNN
+F 3 "" H 6600 3400 50  0000 C CNN
+	1    6600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3400 6600 3250
+$Comp
+L GND #PWR?
+U 1 1 56E4937F
+P 5750 3400
+F 0 "#PWR?" H 5750 3150 50  0001 C CNN
+F 1 "GND" H 5750 3250 50  0000 C CNN
+F 2 "" H 5750 3400 50  0000 C CNN
+F 3 "" H 5750 3400 50  0000 C CNN
+	1    5750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3050 5750 3400
+Wire Wire Line
+	5750 3150 5650 3150
+Wire Wire Line
+	5750 3050 5650 3050
+Connection ~ 5750 3150
+NoConn ~ 5650 2650
+NoConn ~ 5650 2750
+$Comp
+L Led_Small D?
+U 1 1 56E4972B
+P 7050 2500
+F 0 "D?" H 7000 2625 50  0000 L CNN
+F 1 "STATUS_LED" H 6875 2400 50  0000 L CNN
+F 2 "" V 7050 2500 50  0000 C CNN
+F 3 "" V 7050 2500 50  0000 C CNN
+	1    7050 2500
+	0    1    -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 56E49B4C
+P 6850 2750
+F 0 "R?" V 6930 2750 50  0000 C CNN
+F 1 "100" V 6850 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6780 2750 50  0001 C CNN
+F 3 "" H 6850 2750 50  0000 C CNN
+	1    6850 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7050 2600 7050 2750
+Wire Wire Line
+	7050 2750 7000 2750
+Wire Wire Line
+	6700 2750 6600 2750
+Wire Wire Line
+	6600 2750 6600 2850
+$Comp
+L +3V3 #PWR?
+U 1 1 56E4A30D
+P 7050 2300
+F 0 "#PWR?" H 7050 2150 50  0001 C CNN
+F 1 "+3V3" H 7050 2440 50  0000 C CNN
+F 2 "" H 7050 2300 50  0000 C CNN
+F 3 "" H 7050 2300 50  0000 C CNN
+	1    7050 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2400 7050 2300
+Text Label 5900 3050 0    60   ~ 0
+STATUS
+Wire Wire Line
+	5900 3050 6250 3050
+Text Label 3050 2550 2    60   ~ 0
+STATUS
+Wire Wire Line
+	2450 2550 3050 2550
+Text Label 3150 3100 0    60   ~ 0
+MAX_SD_MISO
+Wire Wire Line
+	3150 2700 3850 2700
+Text Label 3150 2700 0    60   ~ 0
+SD_MOSI
+Text Label 3150 2900 0    60   ~ 0
+MAX_SD_SCK
+Wire Wire Line
+	3150 2900 3850 2900
+Text Label 3150 2600 0    60   ~ 0
+~MAX_CS
+Wire Wire Line
+	3150 2600 3850 2600
+NoConn ~ 3850 2500
+Wire Wire Line
+	3150 3100 3850 3100
+NoConn ~ 3850 3200
+$Comp
+L GND #PWR?
+U 1 1 56E500A3
+P 3800 3300
+F 0 "#PWR?" H 3800 3050 50  0001 C CNN
+F 1 "GND" H 3800 3150 50  0000 C CNN
+F 2 "" H 3800 3300 50  0000 C CNN
+F 3 "" H 3800 3300 50  0000 C CNN
+	1    3800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3000 3800 3000
+Wire Wire Line
+	3800 3000 3800 3300
+$Comp
+L +3V3 #PWR?
+U 1 1 56E50399
+P 3800 2400
+F 0 "#PWR?" H 3800 2250 50  0001 C CNN
+F 1 "+3V3" H 3800 2540 50  0000 C CNN
+F 2 "" H 3800 2400 50  0000 C CNN
+F 3 "" H 3800 2400 50  0000 C CNN
+	1    3800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2400 3800 2800
+Wire Wire Line
+	3800 2800 3850 2800
 $EndSCHEMATC

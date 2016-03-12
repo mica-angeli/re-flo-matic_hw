@@ -1231,16 +1231,14 @@ F 3 "" H 6000 6300 50  0000 C CNN
 	1    6000 6300
 	1    0    0    -1  
 $EndComp
-Text Notes 7100 6950 0    60   ~ 0
-This is a PID controller for a reflow oven.  It features temperature sensing through a\nK-type thermocouple, dual element control, a touchscreen user interface, a servo\nautomatic door opener, and a buzzer to alert the user.
+Text Notes 7100 7000 0    60   ~ 0
+This is a PID controller for a reflow oven.  It features temperature sensing through a\nK-type thermocouple, dual element control, a touchscreen user interface, a servo\nautomatic door opener, a Micro SD slot for storing icons used in the UI and storing\ntemperature profiles, and a buzzer to alert the user.
 Text Notes 7350 7500 0    60   ~ 0
 Re-Flo-Matic Schematic Drawing
 Text Notes 8150 7650 0    60   ~ 0
 3/11/2016
 Text Notes 10600 7650 0    60   ~ 0
 B
-Text Notes 2450 1400 0    60   ~ 0
-TODO\n--------------------------------\n+ Make sure TFT LED resistor values are correct.\n+ Make sure piezo resistor is the correct value.\n+ Reverse TFT connector pin order.
 Text Label 3050 3750 2    60   ~ 0
 SD_MOSI
 Wire Wire Line
@@ -1369,10 +1367,8 @@ Text Label 3150 2600 0    60   ~ 0
 ~MAX_CS
 Wire Wire Line
 	3150 2600 3850 2600
-NoConn ~ 3850 2500
 Wire Wire Line
 	3150 3100 3850 3100
-NoConn ~ 3850 3200
 $Comp
 L GND #PWR?
 U 1 1 56E500A3
@@ -1391,16 +1387,68 @@ Wire Wire Line
 $Comp
 L +3V3 #PWR?
 U 1 1 56E50399
-P 3800 2400
-F 0 "#PWR?" H 3800 2250 50  0001 C CNN
-F 1 "+3V3" H 3800 2540 50  0000 C CNN
-F 2 "" H 3800 2400 50  0000 C CNN
-F 3 "" H 3800 2400 50  0000 C CNN
-	1    3800 2400
+P 3700 2000
+F 0 "#PWR?" H 3700 1850 50  0001 C CNN
+F 1 "+3V3" H 3700 2140 50  0000 C CNN
+F 2 "" H 3700 2000 50  0000 C CNN
+F 3 "" H 3700 2000 50  0000 C CNN
+	1    3700 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 2400 3800 2800
+	3800 2050 3800 2800
 Wire Wire Line
 	3800 2800 3850 2800
+$Comp
+L R R?
+U 1 1 56E5D162
+P 3600 2250
+F 0 "R?" V 3680 2250 50  0000 C CNN
+F 1 "47k" V 3600 2250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3530 2250 50  0001 C CNN
+F 3 "" H 3600 2250 50  0000 C CNN
+	1    3600 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 2500 3600 2500
+Wire Wire Line
+	3600 2500 3600 2400
+Wire Wire Line
+	3600 2100 3600 2050
+Wire Wire Line
+	3600 2050 3800 2050
+Wire Wire Line
+	3700 2050 3700 2000
+Connection ~ 3700 2050
+$Comp
+L R R?
+U 1 1 56E5D7B9
+P 3500 3250
+F 0 "R?" V 3580 3250 50  0000 C CNN
+F 1 "47k" V 3500 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3430 3250 50  0001 C CNN
+F 3 "" H 3500 3250 50  0000 C CNN
+	1    3500 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 56E5D887
+P 3300 3250
+F 0 "#PWR?" H 3300 3100 50  0001 C CNN
+F 1 "+3V3" H 3300 3390 50  0000 C CNN
+F 2 "" H 3300 3250 50  0000 C CNN
+F 3 "" H 3300 3250 50  0000 C CNN
+	1    3300 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 3250 3300 3250
+Wire Wire Line
+	3650 3250 3700 3250
+Wire Wire Line
+	3700 3250 3700 3200
+Wire Wire Line
+	3700 3200 3850 3200
 $EndSCHEMATC
