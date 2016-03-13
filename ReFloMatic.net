@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/mrrat/Documents/KiCad/ReFloMatic/ReFloMatic.sch)
-    (date "3/13/2016 1:02:55 PM")
+    (date "3/13/2016 4:41:23 PM")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -65,7 +65,7 @@
       (tstamp 56DAAFD8))
     (comp (ref DS1)
       (value ER-TFT028-4)
-      (footprint TFT:FPC_50)
+      (footprint TFT:ER-TFT028-4)
       (libsource (lib TFT) (part ER-TFT028-4))
       (sheetpath (names /) (tstamps /))
       (tstamp 56DAD183))
